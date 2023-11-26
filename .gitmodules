@@ -1,0 +1,3 @@
+[submodule "external-repos/bigdata-docker-compose"]
+	path = external-repos/bigdata-docker-compose
+	url = https://github.com/vladErmakov07/bigdata-docker-compose.git
