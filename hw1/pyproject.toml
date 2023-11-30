@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hadoop-notebook"
+version = "1.0.0"
+description = "HW1 - ITMO University 'Big Data Processing and Analysis Systems' course"
+authors = ["Daniel Kopecky <danielkopecky@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+pyarrow = "^14.0.1"
+mrjob = "^0.7.4"
+matplotlib = "^3.8.2"
+nltk = "^3.8.1"
+ipython = "^8.18.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
