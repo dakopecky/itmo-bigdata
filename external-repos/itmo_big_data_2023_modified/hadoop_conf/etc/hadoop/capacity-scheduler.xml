@@ -1,0 +1,274 @@
+<configuration>
+
+    <property>
+        <name>yarn.scheduler.capacity.maximum-applications</name>
+        <value>10000</value>
+        <description>
+            Maximum number of applications that can be pending and running.
+        </description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
+        <value>0.2</value>
+        <description>
+            Maximum percent of resources in the cluster which can be used to run
+            application masters i.e. controls number of concurrent running
+            applications.
+        </description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.resource-calculator</name>
+        <value>org.apache.hadoop.yarn.util.resource.DominantResourceCalculator</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.queues</name>
+        <value>experiments,loaders,dwhTeamOne,analystTeam,jupyter,default</value>
+    </property>
+
+    <!-- default queue configuration -->
+    <property>
+        <name>yarn.scheduler.capacity.root.default.capacity</name>
+        <value>10</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.user-limit-factor</name>
+        <value>4</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.maximum-capacity</name>
+        <value>100</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.default.ordering-policy</name>
+        <value>fair</value>
+    </property>
+    <!-- end of default queue configuration -->
+
+    <!-- experiments queue configuration -->
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.capacity</name>
+        <value>12</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.user-limit-factor</name>
+        <value>4</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.maximum-capacity</name>
+        <value>50</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.experiments.ordering-policy</name>
+        <value>fair</value>
+    </property>
+    <!-- end of experiments queue configuration -->
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.capacity</name>
+        <value>10</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.user-limit-factor</name>
+        <value>6</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.maximum-capacity</name>
+        <value>60</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.loaders.ordering-policy</name>
+        <value>fair</value>
+    </property>
+    <!-- end of loaders queue configuration -->
+
+    <!-- datalab queue configuration -->
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.capacity</name>
+        <value>33</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.user-limit-factor</name>
+        <value>2</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.maximum-capacity</name>
+        <value>80</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.dwhTeamOne.ordering-policy</name>
+        <value>fair</value>
+    </property>
+    <!-- end of datalab queue configuration -->
+
+    <!-- dwh queue configuration -->
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.capacity</name>
+        <value>30</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.user-limit-factor</name>
+        <value>2</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.maximum-capacity</name>
+        <value>60</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.analystTeam.ordering-policy</name>
+        <value>fair</value>
+    </property>
+    <!-- end of dwh queue configuration -->
+
+    <!-- zeppelin queue configuration -->
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.capacity</name>
+        <value>5</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.maximum-capacity</name>
+        <value>70</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.user-limit-factor</name>
+        <value>3.5</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.state</name>
+        <value>RUNNING</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.ordering-policy</name>
+        <value>fair</value>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.maximum-am-resource-percent</name>
+        <value>50</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.acl_submit_applications</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>yarn.scheduler.capacity.root.jupyter.acl_administer_queue</name>
+        <value>*</value>
+    </property>
+
+    <!-- end of zeppelin queue configuration -->
+
+    <property>
+        <name>yarn.scheduler.capacity.node-locality-delay</name>
+        <value>40</value>
+        <description>
+            Number of missed scheduling opportunities after which the CapacityScheduler
+            attempts to schedule rack-local containers.
+            Typically this should be set to number of nodes in the cluster, By default is setting
+            approximately number of nodes in one rack which is 40.
+        </description>
+    </property>
+
+    <property>
+        <name>yarn.scheduler.capacity.queue-mappings-override.enable</name>
+        <value>false</value>
+        <description>
+            If a queue mapping is present, will it override the value specified
+            by the user? This can be used by administrators to place jobs in queues
+            that are different than the one specified by the user.
+            The default is false.
+        </description>
+    </property>
+</configuration>
