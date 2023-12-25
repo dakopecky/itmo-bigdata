@@ -1,0 +1,74 @@
+<configuration>
+<property><name>yarn.resourcemanager.hostname</name><value>resourcemanager</value></property>
+
+<property>
+  <description>Classpath for typical applications.</description>
+  <name>yarn.application.classpath</name>
+  <value>
+    $HADOOP_CONF_DIR,
+    $HADOOP_COMMON_HOME/share/hadoop/common/*,
+    $HADOOP_COMMON_HOME/share/hadoop/common/lib/*,
+    $HADOOP_HDFS_HOME/share/hadoop/hdfs/*,
+    $HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,
+    $HADOOP_YARN_HOME/share/hadoop/yarn/*,
+    $HADOOP_YARN_HOME/share/hadoop/yarn/lib/*
+  </value>
+</property>
+
+<property><name>yarn.log-aggregation-enable</name><value>false</value></property>
+<property><name>yarn.log.server.url</name><value>http://historyserver:8188/applicationhistory/logs/</value></property>
+<property><name>yarn.timeline-service.enabled</name><value>false</value></property>
+<property><name>yarn.timeline-service.hostname</name><value>historyserver</value></property>
+<property><name>yarn.timeline-service.generic-application-history.enabled</name><value>false</value></property>
+
+<property><name>yarn.nodemanager.pmem-check-enabled</name><value>false</value></property>
+<property><name>yarn.nodemanager.delete.debug-delay-sec</name><value>600</value></property>
+
+<property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property>
+<property>
+  <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+
+<property><name>yarn.nodemanager.vmem-check-enabled</name><value>false</value></property>
+<property><name>yarn.nodemanager.pmem-check-enabled</name><value>false</value></property>
+<property><name>yarn.nodemanager.delete.debug-delay-sec</name><value>600</value></property>
+<property>
+  <name>yarn.resourcemanager.scheduler.class</name>
+  <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+</property>
+<property>
+  <name>yarn.scheduler.capacity.user-as-default-queue</name>
+  <value>false</value>
+</property>
+<property>
+  <name>yarn.scheduler.capacity.allow-undeclared-pools</name>
+  <value>false</value>
+</property>
+<property>
+  <name>yarn.scheduler.fair.preemption</name>
+  <value>true</value>
+</property>
+<property>
+  <name>yarn.scheduler.fair.preemption.cluster-utilization-threshold</name>
+  <value>0.5</value>
+</property>
+<property>
+  <name>yarn.scheduler.fair.assignmultiple</name>
+  <value>true</value>
+</property>
+
+<property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>16384</value>
+</property>
+<property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>512</value>
+</property>
+<property>
+  <name>yarn.scheduler.maximum-allocation-vcores</name>
+  <value>8</value>
+</property>
+
+</configuration>

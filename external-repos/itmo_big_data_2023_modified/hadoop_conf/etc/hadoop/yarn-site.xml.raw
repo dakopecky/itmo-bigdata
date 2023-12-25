@@ -1,0 +1,5 @@
+yarn.nodemanager.aux-services: mapreduce_shuffle
+yarn.nodemanager.delete.debug-delay-sec: 600
+yarn.nodemanager.pmem-check-enabled: false
+yarn.nodemanager.vmem-check-enabled: false
+yarn.resourcemanager.hostname: resourcemanager

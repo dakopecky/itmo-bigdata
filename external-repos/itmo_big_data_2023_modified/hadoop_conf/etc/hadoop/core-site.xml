@@ -1,0 +1,17 @@
+<configuration>
+<property><name>fs.default.name</name><value>hdfs://namenode</value></property>
+<property><name>fs.defaultFS</name><value>hdfs://namenode</value></property>
+<property><name>dfs.namenode.name.dir</name><value>/tmp/hadoop-root/</value></property>
+<!--
+<property><name>hadoop.tmp.dir</name><value>/tmp/hadoop-hadoop</value></property>
+-->
+
+    <property>
+        <name>hadoop.proxyuser.username.groups</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.username.hosts</name>
+        <value>*</value>
+    </property>
+</configuration>
